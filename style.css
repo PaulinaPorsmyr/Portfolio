@@ -1,0 +1,444 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/cube.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+
+nav.meny {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.4rem 2rem;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;           
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.nav-links li a {
+    font-size: 1.3rem;
+    color: rgb(243, 240, 244);
+    text-shadow: 0px 0.1rem 0.9rem rgb(245, 243, 245);
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    font-weight: 500;  
+    transition: all 0.3s ease;
+   
+}
+
+.nav-links li a:hover {
+    text-shadow: 
+        0 0 20px rgb(255, 242, 0), 
+        0 0 20px rgb(255, 242, 0);
+    color: #fff;
+}
+
+
+.nav-links li:first-child {
+    margin-right: auto; 
+}
+
+
+.nav-links li:first-child a {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    padding-left: 0; 
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+}
+
+.textbox {
+    background-color: rgba(81, 70, 70, 0.4);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0,0,0,0.8);
+    text-align: center;
+    color: rgb(249, 250, 247);
+}
+
+.textbox h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.textbox p {
+    line-height: 1.5;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgb(11, 1, 1, 0.7);
+}
+
+footer a {
+    color: rgb(243, 240, 244);
+    text-decoration: none;
+    text-shadow: 0px 0.1rem 0.9rem rgb(243, 245, 243);
+    
+}
+
+footer a:hover {
+    text-shadow: 
+        0 0 20px rgb(255, 242, 0), 
+        0 0 20px rgb(255, 242, 0);
+    color: #fff;
+}
+
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+.footer-name {
+    color: rgb(255, 242, 0); 
+    font-weight: 600;        
+    font-family: 'Michroma', sans-serif; 
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        justify-content: center; 
+    }
+
+    .nav-links li:first-child {
+        margin-right: 0; 
+        width: 100%;     
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .textbox h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+    }
+}
+
+
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    align-items: start; 
+}
+
+
+.resume-sidebar {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 2rem rgba(0,0,0,0.5);
+    border-left: 3px solid rgb(255, 242, 0); 
+}
+
+
+.resume-main {
+    background-color: rgba(81, 70, 70, 0.4);
+    padding: 3rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 2rem rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.resume-main h1 {
+    font-family: 'Michroma', sans-serif;
+    margin-bottom: 1rem;
+    color: rgb(255, 242, 0); 
+}
+
+.resume-main h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.resume-sidebar h3 {
+    color: rgb(255, 242, 0);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.resume-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-sidebar li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.date {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.job, .edu-item {
+    margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 850px) {
+    .resume-container {
+        grid-template-columns: 1fr; 
+        padding: 1rem;
+    }
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+.badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+.badge.backend { border-left: 3px solid #512bd4; } 
+.badge.database { border-left: 3px solid #00758f; } 
+.badge.frontend { border-left: 3px solid #61dbfb; }
+.badge.tool { border-left: 3px solid rgb(255, 242, 0); } 
+
+
+.badge:hover {
+    background-color: rgba(255, 242, 0, 0.2);
+    border-color: rgb(255, 242, 0);
+    transform: translateY(-2px);
+    cursor: default;
+}
+
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.projects-header h1 {
+    font-family: 'Michroma', sans-serif;
+    color: rgb(255, 242, 0);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.projects-header p {
+    color:rgb(222, 224, 227);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+
+.project-card {
+    background-color: rgba(81, 70, 70, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(81, 70, 70, 0.5);
+    border-color: rgb(255, 242, 0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    font-size: 0.7rem;
+    background: rgba(255, 242, 0, 0.1);
+    color: rgb(255, 242, 0);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 242, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.project-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.github-link {
+    text-decoration: none;
+    color: rgb(255, 242, 0);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: letter-spacing 0.3s ease;
+}
+
+.project-card:hover .github-link {
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.egg-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none; justify-content: center; align-items: center;
+    z-index: 9999;
+}
+.egg-modal-content {
+    background: #222;
+    padding: 3rem;
+    border: 2px solid rgb(255, 242, 0);
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+    font-family: 'Michroma', sans-serif;
+}
+.egg-modal-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: rgb(255, 242, 0);
+    border: none;
+    font-weight: bold;
+}
+
+
+@media print {
+    
+    nav, footer, .egg-modal {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    .resume-container {
+        display: block !important; 
+        width: 100%;
+    }
+
+    .resume-main, .resume-sidebar {
+        background: none !important;
+        color: black !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 2rem;
+    }
+
+    h1, h2, h3 {
+        color: black !important;
+        page-break-after: avoid;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: black !important;
+    }
+}
+
