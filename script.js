@@ -1,5 +1,5 @@
 // --- PÅSKÄGG 1: Klick på udda del (Footer) ---
-// Vi använder footern. Ett klick här byter bakgrundsbild.
+
 const footer = document.querySelector('footer');
 
 if (footer) {
@@ -10,26 +10,26 @@ if (footer) {
     });
 }
 
-// --- PÅSKÄGG 2: Tangentbordskombination "1337" ---
+/*påskägg 2: */
 let inputBuffer = "";
 const secretCode = "1337";
 
 document.addEventListener('keydown', (e) => {
     inputBuffer += e.key;
     
-    // Håll buffern till samma längd som koden
+   
     if (inputBuffer.length > secretCode.length) {
         inputBuffer = inputBuffer.substring(1);
     }
 
     if (inputBuffer === secretCode) {
         activateModal();
-        inputBuffer = ""; // Reset
+        inputBuffer = ""; 
     }
 });
 
 function activateModal() {
-    // Skapa modalen dynamiskt så den garanterat finns på alla sidor
+   
     const modalHtml = `
         <div id="easterModal" class="egg-modal">
             <div class="egg-modal-content">
