@@ -476,3 +476,53 @@ footer p {
         height: 180px;
     }
 }
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack i {
+    font-size: 3.5rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tech-stack i::after {
+    content: attr(title); 
+    position: absolute;
+    bottom: -30px;      
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 242, 0); 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;  /* Tips för att "gömma text" */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.tech-stack i:hover {
+    transform: scale(1.2) translateY(-10px); /* Skalan för hur stora ikonerna blir när man hovrar över */
+}
+
+
+.tech-stack i:hover::after {
+    opacity: 1; /* Visar ikon-namn när man håller musen ovanför */
+    transform: translateY(5px);
+}

@@ -48,3 +48,4 @@ function activateModal() {
         modal.remove();
     };
 }
+
