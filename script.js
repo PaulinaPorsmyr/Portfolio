@@ -11,7 +11,7 @@ if (contactForm) {
         submitBtn.innerText = 'Sending...';
 
         // Uppdatera med dina ID:n från EmailJS
-        emailjs.sendForm('service_5pako7m', 'template_rm5h5y5', this)
+        emailjs.sendForm('service_5pako7m', 'template_uo1ucrv', this)
             .then(() => {
                 contactForm.style.display = 'none';
                 successMsg.classList.remove('hidden');
