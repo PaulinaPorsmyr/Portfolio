@@ -82,14 +82,14 @@ main {
 }
 
 .textbox {
-    background-color: rgba(81, 70, 70, 0.4);
-    padding: 2rem;
-    max-width: 500px;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 0 2rem rgba(0,0,0,0.8);
-    text-align: center;
-    color: rgb(249, 250, 247);
+   background-color: rgba(81, 70, 70, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
 }
 
 .textbox h2 {
