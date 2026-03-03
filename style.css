@@ -501,3 +501,7 @@ footer p {
     opacity: 1; /* Visar ikon-namn när man håller musen ovanför */
     transform: translateY(5px);
 }
+
+.hidden {
+    display: none !important;
+}
