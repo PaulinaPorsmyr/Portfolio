@@ -36,7 +36,6 @@ nav.meny {
     justify-content: flex-start;
 }
 
-
 .nav-links li a {
     font-size: 1.3rem;
     color: rgb(243, 240, 244);
@@ -46,7 +45,6 @@ nav.meny {
     padding: 0.7rem 1rem;
     font-weight: 500;  
     transition: all 0.3s ease;
-   
 }
 
 .nav-links li a:hover {
@@ -56,11 +54,9 @@ nav.meny {
     color: #fff;
 }
 
-
 .nav-links li:first-child {
     margin-right: auto; 
 }
-
 
 .nav-links li:first-child a {
     font-family: 'Michroma', sans-serif;
@@ -82,7 +78,7 @@ main {
 }
 
 .textbox {
-   background-color: rgba(81, 70, 70, 0.3);
+    background-color: rgba(81, 70, 70, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1.5rem;
     padding: 2.5rem;
@@ -112,7 +108,6 @@ footer a {
     color: rgb(243, 240, 244);
     text-decoration: none;
     text-shadow: 0px 0.1rem 0.9rem rgb(243, 245, 243);
-    
 }
 
 footer a:hover {
@@ -121,7 +116,6 @@ footer a:hover {
         0 0 20px rgb(255, 242, 0);
     color: #fff;
 }
-
 
 footer p {
     margin: 0.3rem 0;
@@ -162,6 +156,8 @@ footer p {
 }
 
 
+/* ── Resume ────────────────────────────────────────────────────────────── */
+
 .resume-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -171,7 +167,6 @@ footer p {
     align-items: start; 
 }
 
-
 .resume-sidebar {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
@@ -180,7 +175,6 @@ footer p {
     box-shadow: 0 0 2rem rgba(0,0,0,0.5);
     border-left: 3px solid rgb(255, 242, 0); 
 }
-
 
 .resume-main {
     background-color: rgba(81, 70, 70, 0.4);
@@ -235,7 +229,6 @@ footer p {
     margin-bottom: 1.5rem;
 }
 
-
 @media (max-width: 850px) {
     .resume-container {
         grid-template-columns: 1fr; 
@@ -250,7 +243,6 @@ footer p {
     margin-top: 0.5rem;
 }
 
-
 .badge {
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
@@ -264,12 +256,10 @@ footer p {
     transition: all 0.3s ease;
 }
 
-
-.badge.backend { border-left: 3px solid #512bd4; } 
+.badge.backend  { border-left: 3px solid #512bd4; } 
 .badge.database { border-left: 3px solid #00758f; } 
 .badge.frontend { border-left: 3px solid #61dbfb; }
-.badge.tool { border-left: 3px solid rgb(255, 242, 0); } 
-
+.badge.tool     { border-left: 3px solid rgb(255, 242, 0); } 
 
 .badge:hover {
     background-color: rgba(255, 242, 0, 0.2);
@@ -279,11 +269,13 @@ footer p {
 }
 
 
+/* ── Projects ──────────────────────────────────────────────────────────── */
 
 .projects-container {
-    background: rgba(255, 255, 255, 0.02); /* Ger en extremt svag lyster bakom allt */
+    background: rgba(255, 255, 255, 0.02);
     border-radius: 20px;
     padding: 60px 40px;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .projects-header {
@@ -299,7 +291,7 @@ footer p {
 }
 
 .projects-header p {
-    color:rgb(222, 224, 227);
+    color: rgb(222, 224, 227);
 }
 
 .projects-grid {
@@ -307,7 +299,6 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
 }
-
 
 .project-card {
     background-color: rgba(81, 70, 70, 0.3);
@@ -318,7 +309,6 @@ footer p {
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .project-card:hover {
@@ -326,6 +316,35 @@ footer p {
     background-color: rgba(81, 70, 70, 0.5);
     border-color: rgb(255, 242, 0);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Projektbild */
+.project-image-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Kortinnehåll */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-tags {
@@ -346,6 +365,13 @@ footer p {
     font-weight: bold;
 }
 
+.tag:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 .project-card h3 {
     font-family: 'Michroma', sans-serif;
     font-size: 1.3rem;
@@ -356,8 +382,17 @@ footer p {
 .project-card p {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
-    margin-bottom: 2rem;
     font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.project-links {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .github-link {
@@ -372,6 +407,26 @@ footer p {
     letter-spacing: 1px;
 }
 
+/* More Info-knapp */
+.info-btn {
+    background: transparent;
+    border: 1px solid rgb(255, 242, 0);
+    color: rgb(255, 242, 0);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-btn:hover {
+    background-color: rgb(255, 242, 0);
+    color: #000;
+}
 
 @media (max-width: 600px) {
     .projects-grid {
@@ -380,43 +435,91 @@ footer p {
 }
 
 
+/* ── Modal ─────────────────────────────────────────────────────────────── */
 
-@media print {
-    
-    nav, footer{
-        display: none !important;
-    }
-    
-    body {
-        background: white !important;
-        color: black !important;
-        font-size: 12pt;
-    }
-
-    .resume-container {
-        display: block !important; 
-        width: 100%;
-    }
-
-    .resume-main, .resume-sidebar {
-        background: none !important;
-        color: black !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        margin-bottom: 2rem;
-    }
-
-    h1, h2, h3 {
-        color: black !important;
-        page-break-after: avoid;
-    }
-    
-    a {
-        text-decoration: underline;
-        color: black !important;
-    }
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1.5rem;
+    animation: fadeIn 0.25s ease;
 }
 
+.modal-box {
+    background: rgba(20, 15, 15, 0.95);
+    border: 1px solid rgba(255, 242, 0, 0.4);
+    border-radius: 1.5rem;
+    max-width: 640px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 4rem rgba(255, 242, 0, 0.1);
+    animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-body {
+    padding: 2rem;
+    color: #fff;
+}
+
+.modal-body h2 {
+    font-family: 'Michroma', sans-serif;
+    color: rgb(255, 242, 0);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.modal-body p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.modal-body .project-tags {
+    margin-bottom: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgb(255, 242, 0);
+    color: #000;
+    border-color: rgb(255, 242, 0);
+}
+
+
+/* ── About ─────────────────────────────────────────────────────────────── */
 
 .about-container {
     display: flex;
@@ -427,7 +530,6 @@ footer p {
     width: 100%;
     max-width: 1100px;
 }
-
 
 .profile-pic-side {
     width: 200px;         
@@ -467,13 +569,13 @@ footer p {
 .tech-stack i {
     font-size: 3.5rem;
     position: relative;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: grayscale(20%); 
 }
-
 
 .tech-stack i::after {
     content: attr(title); 
@@ -485,35 +587,10 @@ footer p {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    opacity: 0;  /* Tips för att "gömma text" */
+    opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
     text-shadow: 0 0 10px rgba(0,0,0,0.8);
-}
-
-.tech-stack i:hover {
-    transform: scale(1.2) translateY(-10px); /* Skalan för hur stora ikonerna blir när man hovrar över */
-}
-
-.tech-stack-section h2 {
-   color: rgb(243, 240, 244);
-    text-shadow: 0px 0.1rem 0.9rem rgb(245, 243, 245);
-    letter-spacing: 2px; /* Ger en lite lyxigare "tech"-känsla */
-}
-
-.tech-stack i:hover::after {
-    opacity: 1; /* Visar ikon-namn när man håller musen ovanför */
-    transform: translateY(5px);
-}
-
-.hidden {
-    display: none !important;
-}
-
-
-.tech-stack i {
-    transition: all 0.3s ease;
-    filter: grayscale(20%); 
 }
 
 .tech-stack i:hover {
@@ -523,12 +600,21 @@ footer p {
     text-shadow: 0 0 20px rgba(255, 242, 0, 0.6);
 }
 
+.tech-stack i:hover::after {
+    opacity: 1;
+    transform: translateY(5px);
+}
 
-.tag:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.05);
-    transition: 0.3s;
+.tech-stack-section h2 {
+    color: rgb(243, 240, 244);
+    text-shadow: 0px 0.1rem 0.9rem rgb(245, 243, 245);
+    letter-spacing: 2px;
+}
+
+
+
+.hidden {
+    display: none;
 }
 
 @keyframes fadeInUp {
@@ -542,6 +628,49 @@ footer p {
     }
 }
 
-.projects-container {
-    animation: fadeInUp 0.8s ease-out;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+@media print {
+    nav, footer {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black ;
+        font-size: 12pt;
+    }
+
+    .resume-container {
+        display: block; 
+        width: 100%;
+    }
+
+    .resume-main, .resume-sidebar {
+        background: none;
+        color: black;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    h1, h2, h3 {
+        color: black;
+        page-break-after: avoid;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: black ;
+    }
 }

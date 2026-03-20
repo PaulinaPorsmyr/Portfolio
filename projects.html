@@ -30,8 +30,16 @@
     </header>
 
     <div class="projects-grid">
-        
-        <article class="project-card">
+
+        <article class="project-card" 
+            data-title="School Database System"
+            data-description="A SQL Server database project designed to manage a school system, featuring tables for students, teachers, classes, and grades. The schema is fully normalized to 3NF to ensure data integrity and eliminate redundancy. Includes stored procedures for common operations, views for reporting, and triggers for audit logging."
+            data-tags="SQL Server,T-SQL,Database Design"
+            data-github="https://github.com/PaulinaPorsmyr/SchoolTestDb"
+            data-img="img/Database.jpg">
+            <div class="project-image-wrapper">
+                <img src="img/Database.jpg" alt="School Database System" class="project-image" onerror="this.src='https://placehold.co/600x300/1a1a1a/555?text=School+Database'">
+            </div>
             <div class="project-content">
                 <div class="project-tags">
                     <span class="tag">SQL Server</span>
@@ -39,15 +47,24 @@
                     <span class="tag">Database Design</span>
                 </div>
                 <h3>School Database System</h3>
-                <p>A SQL Server database project designed to manage a school system, featuring tables for students, teachers, classes, and grades. Focuses on data normalization and integrity.</p>
+                <p>A SQL Server database project designed to manage a school system, featuring tables for students, teachers, classes, and grades.</p>
                 <div class="project-links">
                     <a href="https://github.com/PaulinaPorsmyr/SchoolTestDb" target="_blank" class="github-link">View Repository →</a>
+                    <button class="info-btn">More Info</button>
                 </div>
             </div>
         </article>
 
-        <article class="project-card">
-            <div class="project-content">                
+        <article class="project-card"
+            data-title="Bank Application"
+            data-description="A console-based banking system simulating core functionalities like creating accounts, transferring funds, and checking balances. Built with strict OOP principles including inheritance, encapsulation, and polymorphism. Features a menu-driven interface, input validation, and persistent session state throughout the program's lifecycle."
+            data-tags="C#,Console App,OOP,.NET, EF"
+            data-github="https://github.com/PaulinaPorsmyr/BankApp"
+            data-img="img/bank.jpg">
+            <div class="project-image-wrapper">
+                <img src="img/bank.jpg" alt="Bank Application" class="project-image" onerror="this.src='https://placehold.co/600x300/1a1a1a/555?text=Bank+Application'">
+            </div>
+            <div class="project-content">
                 <div class="project-tags">
                     <span class="tag">C#</span>
                     <span class="tag">Console App</span>
@@ -55,14 +72,23 @@
                     <span class="tag">.NET</span>
                 </div>
                 <h3>Bank Application</h3>
-                <p>A console-based banking system simulating core functionalities like creating accounts, transferring funds, and checking balances. Built with strict OOP principles.</p>
+                <p>A console-based banking system simulating core functionalities like creating accounts, transferring funds, and checking balances.</p>
                 <div class="project-links">
                     <a href="https://github.com/PaulinaPorsmyr/BankApp" target="_blank" class="github-link">View Repository →</a>
+                    <button class="info-btn">More Info</button>
                 </div>
             </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card"
+            data-title="Portfolio Website"
+            data-description="This very website! Built from scratch to showcase my journey as a developer, focusing on clean UI/UX and modern CSS techniques like Flexbox and Grid. Features a responsive layout, animated tech stack icons, a modal-driven project showcase, a resume section with print support, and an integrated contact form powered by EmailJS."
+            data-tags="HTML/CSS,JavaScript,React"
+            data-github="https://github.com/PaulinaPorsmyr/Portfolio"
+            data-img="img/Printscreen.png">
+            <div class="project-image-wrapper">
+                <img src="img/Printscreen.png" alt="Portfolio Website" class="project-image" onerror="this.src='https://placehold.co/600x300/1a1a1a/555?text=Portfolio+Website'">
+            </div>
             <div class="project-content">
                 <div class="project-tags">
                     <span class="tag">HTML/CSS</span>
@@ -73,11 +99,27 @@
                 <p>This very website! Built to showcase my journey as a developer, focusing on clean UI/UX and modern CSS techniques like Flexbox and Grid.</p>
                 <div class="project-links">
                     <a href="https://github.com/PaulinaPorsmyr/Portfolio" target="_blank" class="github-link">View Repository →</a>
+                    <button class="info-btn">More Info</button>
                 </div>
             </div>
         </article>
 
-    </div> </main>
+    </div>
+</main>
+
+
+<div id="project-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <img id="modal-img" src="" alt="" class="modal-image" onerror="this.style.display='none'">
+        <div class="modal-body">
+            <div id="modal-tags" class="project-tags"></div>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <a id="modal-github" href="" target="_blank" class="github-link">View Repository →</a>
+        </div>
+    </div>
+</div>
 
 <footer>
     <p>
