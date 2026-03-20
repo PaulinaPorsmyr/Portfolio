@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my personal portfolio website where I’ve gathered my projects, my resume, and some info about who I am. I wanted to build something clean but with a bit of a "techy" vibe, using dark mode and neon accents.
+This is my personal portfolio website where I’ve gathered my projects, my resume, and some info about who I am. I wanted to build something clean but with a bit of a "cyberpunk" vibe, using dark mode and neon accents.
 
 ## The Project
 The goal was to create a responsive site from scratch to practice layout and interactive elements. 
